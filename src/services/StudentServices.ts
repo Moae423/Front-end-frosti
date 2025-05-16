@@ -22,3 +22,12 @@ export const addStudents = async (
     throw error;
   }
 };
+
+export const deleteStudents = async (id: number): Promise<void> => {
+  try {
+    await api.delete(`/students/${id}`);
+  } catch (error) {
+    console.log(`error gak bisa delete`);
+    throw error;
+  }
+};
